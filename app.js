@@ -21,6 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 app.use('/', (req, res) => {
+    console.log(req.body.token);
     jwt.verify(req.body.token, process.env.TOKEN, (err, decoded) => {
         if(decoded){
             let mailOptions = {
