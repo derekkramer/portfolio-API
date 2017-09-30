@@ -55,4 +55,8 @@ app.use('/', (req, res) => {
     });
 });
 
+app.use('/test', (req, res) => {
+    res.send('Test route working');
+});
+
 app.listen(port, () => console.log(`Listening on port ${port}`));
